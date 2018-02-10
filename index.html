@@ -26,9 +26,55 @@
             <div class="slides">
                 <section>
                     <h1>Starting a Python TDD project</h1>       
-                    <p>Download python 3.5+<p>
                 </section>
-                <section>Slide 2</section>
+                <section>
+                    <h3>Setting up the enviroment</h3>       
+                    <ol>
+                        <li>Create a diretory and move into
+                            <pre><code data-trim data-noescape>
+                            mkdir newproject 
+                            cd newproject
+                            </code></pre>
+                        </li>
+                        <li>Create a virtual env and activate it
+                            <pre><code data-trim data-noescape>
+                            virtualenv -p python3 venv
+                            source venv/bin/activate
+                            </code></pre>
+                        </li>
+                        <li>Install dependencies
+                            <pre><code data-trim data-noescape>
+                            pip install -r requirements.txt
+                            </code></pre>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>TDD Methodology</h3>       
+                    <ol>
+                        <li>Write a test case</li>
+                        <li>Execute and _FAIL_</li>
+                        <li>Refactor till _SUCCESS_</li>
+                        <li>Goto 1</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>The problem</h3>       
+                    <p>Write a string character compressor</p>
+                    <ol>
+                        <li>"a" returns "a"</li>
+                        <li>"aaaabbcc" returns "a3b2c2"</li>
+                        <li>"bbbbaabbccccc" returns "b4a2b2c5"</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>The rules, the funny part</h3>       
+                    <ol>
+                        <li>First statement must be RETURN</li>
+                        <li>Can't use any "list" method as reduce or map</li>
+                        <li>Can't asign variables</li>
+                    </ol>
+                </section>
             </div>
         </div>
 
